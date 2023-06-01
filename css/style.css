@@ -1,0 +1,305 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 18px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+input::-ms-clear{
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+a{
+  color: #000;
+}
+button::-moz-focus-inner{
+  padding: 0;
+  border: 0;
+}
+
+body {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #171717;
+}
+
+:root{
+  --index: calc(1vw + 1vh);  //Отношение ширины на высоту 
+}
+
+/*font-size: calc(var(--index) * 3.8);*/
+
+.container{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+
+  color: #fff;
+  background-color: #171717;
+  border: 2px solid #111111;
+  border-radius: 20px;
+
+  padding: 35px 30px;
+
+  width: 70vw;
+  height: 80vh;
+
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+}
+
+/*--- calculation ---*/
+
+.calculation{
+  width: 60%;
+}
+
+.row__title{
+  font-weight: 900;
+  font-size: calc(var(--index) * 1.5);
+  margin-bottom: 25px;
+}
+
+.row__title:nth-child(1){
+  transform: translateX(-100px);
+  transition: all 1.5s cubic-bezier(.17,.67,.22,1.32);
+}
+
+.row__title:nth-child(2){
+  transform: translateX(-100px);
+  transition: all 1.5s cubic-bezier(.17,.67,.22,1.32);
+}
+
+
+.row__title.animation-item{
+  transform: translateX(0px);
+}
+
+.form-control{
+  display: flex;
+  width: 100%;
+  color: #fff;
+  background-color: #111111;
+
+  font-weight: 900;
+  font-size: calc(var(--index) * 1);
+
+  margin-bottom: 20px;
+
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.form-control:nth-child(1){
+  transform: translateX(-100px);
+  transition: all 1s cubic-bezier(.17,.67,.22,1.32);
+}
+
+.form-control:nth-child(2){
+  transform: translateX(-100px);
+  transition: all 2s cubic-bezier(.17,.67,.22,1.32);
+}
+
+.form-control.animation-item{
+  transform: translateX(0px);
+}
+
+#input{
+  background-color: #111111;
+  border: 1px solid transparent;
+}
+
+#input:focus{
+  border: 1px solid #4169E1;
+}
+
+.submit-button{
+  color: #fff;
+  background-color: #4169E1;
+  width: 100%;
+  padding: 18px 0;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: calc(var(--index) / 1.3);
+
+  transition: all .2s ease-in-out;
+}
+
+.submit-button{
+  transform: translateY(50px);
+  transition: all 2s cubic-bezier(.17,.67,.22,1.32);
+}
+
+.submit-button.animation-item{
+  transform: translateX(0px);
+}
+
+.submit-button:hover{
+  background-color: #22419E;
+}
+
+.submit-button:active{
+  background-color: #193076;
+}
+
+/*--- courses ---*/
+.courses{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card{
+  text-align: center;
+  border-radius: 10px;
+  padding: 40px 0px;
+  background-color: #111111;
+}
+
+.card:nth-child(1){
+  transform: translateX(100px);
+  transition: all 1s cubic-bezier(.17,.67,.22,1.32);
+}
+
+.card:nth-child(2){
+  transform: translateX(100px);
+  transition: all 1.5s cubic-bezier(.17,.67,.22,1.32);
+}
+
+.card:nth-child(3){
+  transform: translateX(100px);
+  transition: all 2s cubic-bezier(.17,.67,.22,1.32);
+}
+
+.card.animation-item{
+  transform: translateX(0px);
+}
+
+.course-item-title{
+  font-weight: 700;
+  font-size: calc(var(--index) / 1.2);
+  margin-bottom: 7px;
+}
+
+.course-item-value{
+  font-weight: 900;
+  font-size: calc(var(--index) * 2);
+}
+
+.course-item-value.top {
+  color: #FF4242;
+}
+
+.course-item-value.bottom {
+  color: #66FF63;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.copyright{
+  font-size: calc(var(--index) * 1);
+  padding-top: 20px;
+
+  display: flex;
+  justify-content: center;
+
+  color: #fff;
+  opacity: 0.1;
+  font-weight: 900;
+  animation-name: shake;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+}
+
+@keyframes shake {
+  0%{
+    transform: translateY(5px);
+  }50%{
+    transform: translateY(-5px);
+  }100%{
+    transform: translateY(5px);
+  }
+}
+
+@media (max-width: 600px){
+  .container{
+    width: 90vw;
+  }
+
+  .form-control, .row__title {
+    margin-bottom: 15px;
+  }
+
+  .submit-button{
+    position: relative;
+    bottom: -11%;
+  }
+}
+
+
+@media (max-width: 520px){
+  .container{
+    padding: 35px 15px;
+  }
+}
+
+@media (max-width: 420px){
+  .container{
+    width: 95vw;
+  }
+
+  .submit-button{
+    font-size: calc(var(--index) * 1.1);
+    bottom: -16%;
+  }
+
+  .calculation {
+    width: 65%;
+  }
+
+  .courses {
+    width: 32%;
+    height: 60vh;
+  }
+}

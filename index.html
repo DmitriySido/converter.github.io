@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/style.css"/>
+	<title>Converter</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="calculation">
+				<div class="row row-1">
+					<h1 class="row__title animation">I give</h1>
+
+					<select disabled class="form-control animation" id="exampleFormControlSelect1">
+						<option value="RUB" selected>RUB-rubles</option>
+					</select>
+
+					<div class="col">
+						<input id="input" type="number" class="form-control animation" id="name" autofocus />
+					</div>
+				</div>
+
+				<div class="row row-2">
+					<h1 class="row__title animation">I got</h1>
+
+					<select id="select" class="form-control animation" id="exampleFormControlSelect1">
+						<option value="USD">USD — U.S. dollar</option>
+						<option value="EUR">EUR — Euro</option>
+						<option value="GBP">GPB — Sterling</option>
+					</select>
+
+					<div class="col animation">
+						<input id="result" type="number" class="form-control animation" id="name" />
+					</div>
+				</div>
+
+				<button class="submit-button animation">subscribe to news</button>
+			</div>
+
+			<ul class="courses">
+				<li class="course-item card animation card-body">
+					<p class="course-item-title">USD exchange rate</p>
+					<p class="course-item-value" data-value="USD">--.--</p>
+				</li>
+
+				<li class="course-item card animation card-body">
+					<p class="course-item-title">EUR exchange rate</p>
+					<p class="course-item-value" data-value="EUR">--.--</p>
+				</li>
+
+				<li class="course-item card animation card-body">
+					<p class="course-item-title">GBP exchange rate</p>
+					<p class="course-item-value" data-value="GBP">--.--</p>
+				</li>
+			</ul>
+		</div>
+
+		<a class="copyright" href="https://t.me/SidoorenkoD" target="_blank">SIDOORENKO</a>
+
+		<script src="js/animationScroll.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
